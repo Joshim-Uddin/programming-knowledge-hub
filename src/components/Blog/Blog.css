@@ -1,0 +1,34 @@
+.blog{
+    width: 60%;
+    padding: 5px;
+    box-shadow: 0 2px 0 grey ;
+    margin: 20px 0;
+    text-align: left;
+}
+.blog-image{
+    width: 100%;
+    height: 450px;
+}
+.blog-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.blog-author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.author-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.blog h4,p{
+    margin: 5px 0;
+}
+.blog-title{
+    width: 60%;
+}
