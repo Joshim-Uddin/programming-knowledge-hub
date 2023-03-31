@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 import Blog from '../Blog/Blog';
+import Sidebar from '../Sidebar/Sidebar';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
@@ -10,11 +11,16 @@ const Blogs = () => {
         .then(data=>setBlogs(data))
     }, [blogs])
     return (
-        <>
+        <main className='main'>
+            <div className="blogs">
             {
                 blogs.map(blog=> <Blog key={blog.id} blog={blog} />)
             }
-        </>
+            </div>
+            <section>
+                <Sidebar />
+            </section>
+        </main>
     );
 };
 

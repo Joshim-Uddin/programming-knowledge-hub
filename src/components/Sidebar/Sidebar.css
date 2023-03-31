@@ -1,0 +1,24 @@
+.time-log{
+    background: rgba(96, 71, 236, 0.1);
+    border: 1px solid #6047EC;
+    border-radius: 8px;
+    padding: 20px 50px;
+    color: #6047EC;
+    font-size: 1.2rem;
+}
+.bookmark, h4{
+    text-align: left;
+}
+.bookmark{
+    background-color: rgba(17, 17, 17, 0.05);
+    padding: 30px;
+    border-radius: 8px;
+}
+.bookmark h4{
+    margin: 0 0 10px 0;
+}
+.bookmark p{
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+}
