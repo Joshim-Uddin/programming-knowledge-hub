@@ -2,9 +2,8 @@ import React from 'react';
 import './Sidebar.css'
 
 const Sidebar = ({bookmarkedBlogs}) => {
-    // console.log(props)
-    const title = bookmarkedBlogs.map(bookmarkedBlog => bookmarkedBlog.blogTitle)
-
+    console.log(bookmarkedBlogs)
+    
     return (
         <>
             <h4 className='time-log'>Spent time on read : 22 min</h4>

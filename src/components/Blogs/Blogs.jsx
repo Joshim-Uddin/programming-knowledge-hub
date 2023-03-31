@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Blogs.css'
 import Blog from '../Blog/Blog';
 import Sidebar from '../Sidebar/Sidebar';
+import { toast } from 'react-hot-toast';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([])
@@ -13,8 +14,20 @@ const Blogs = () => {
 
     const [bookmarks, setBookmarks] = useState([]) 
     const handleBookmark=(blog)=>{
-        const newBookmarks = [...bookmarks, blog]
-        setBookmarks(newBookmarks)
+        const existBookmarks = bookmarks.find(bookmark=>bookmark.id ==blog.id);
+        console.log(existBookmarks)
+        if(existBookmarks){
+            toast.error("Already Bookmarked", {
+                position: 'top-center'
+            })
+            const newBookmarks = [...bookmarks]
+            setBookmarks(newBookmarks)
+        }else{
+            const newBookmarks = [...bookmarks, blog]
+            setBookmarks(newBookmarks)
+        }
+        
+        
 
     }
     return (

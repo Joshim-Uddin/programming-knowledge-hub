@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import './App.css'
 import Blogs from './components/Blogs/Blogs'
 import Header from './components/Header/Header'
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <hr />
+      <div><Toaster /></div>
       <Blogs />
     </div>
   )
