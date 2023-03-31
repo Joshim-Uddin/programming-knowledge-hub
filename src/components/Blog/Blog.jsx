@@ -17,10 +17,10 @@ const Blog = (props) => {
             <p>{publishDate}</p>
             </div>
             </div>
-            <p>{requiredTime} min read  <FontAwesomeIcon icon={faBookmark} /></p>
+            <p className='color-grey'>{requiredTime} min read <span><FontAwesomeIcon icon={faBookmark} /></span></p>
             </div>
             <h2 className='blog-title'>{blogTitle}</h2>
-            <p>#Beginners #Programming</p>
+            <p className='color-grey'>#Beginners #Programming</p>
             <a href="#">Mark as read</a>
 
         </div>
