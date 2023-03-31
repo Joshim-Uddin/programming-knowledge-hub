@@ -25,22 +25,25 @@ const Blogs = () => {
         }else{
             const newBookmarks = [...bookmarks, blog]
             setBookmarks(newBookmarks)
-        }
-        
-        
-
+        } 
     }
+    const [spentTime, setSpentTime] = useState(0);
+    const handleSpentTime =(blog)=>{
+        const newSpentTime = spentTime + Number(blog.requiredTime);
+        setSpentTime(newSpentTime)
+    }
+
     return (
-        <main className='main'>
+        <div className='main'>
             <div className="blogs">
             {
-                blogs.map(blog=> <Blog key={blog.id} blog={blog} handleBookmark={handleBookmark} />)
+                blogs.map(blog=> <Blog key={blog.id} blog={blog} handleBookmark={handleBookmark} handleSpentTime={handleSpentTime} />)
             }
             </div>
-            <section>
-                <Sidebar bookmarkedBlogs={bookmarks} />
-            </section>
-        </main>
+            <div className='sidebar'>
+                <Sidebar bookmarkedBlogs={bookmarks} spentTime={spentTime}  />
+            </div>
+        </div>
     );
 };
 

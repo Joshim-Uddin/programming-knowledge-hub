@@ -5,6 +5,8 @@
     padding: 20px 50px;
     color: #6047EC;
     font-size: 1.2rem;
+    position: sticky;
+    top: 0px;
 }
 .bookmark, h4{
     text-align: left;
@@ -13,6 +15,8 @@
     background-color: rgba(17, 17, 17, 0.05);
     padding: 30px;
     border-radius: 8px;
+    position: sticky;
+    top: 80px;
 }
 .bookmark h4{
     margin: 0 0 10px 0;

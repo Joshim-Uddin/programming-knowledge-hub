@@ -1,9 +1,11 @@
 .blog{
+    position: relative;
     width: 90%;
     padding: 10px;
     box-shadow: 0 2px 0 rgb(180, 180, 180) ;
     margin: 20px 0;
     text-align: left;
+    
 }
 .blog-image{
     width: 100%;
@@ -41,7 +43,9 @@
     color: gray;
     margin: 8px 0;
 }
-a{
+.read-mark{
     margin: 20px 0;
-    display: block;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
 }
