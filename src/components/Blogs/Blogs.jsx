@@ -9,16 +9,23 @@ const Blogs = () => {
         fetch('data.json')
         .then(res=>res.json())
         .then(data=>setBlogs(data))
-    }, [blogs])
+    }, [])
+
+    const [bookmarks, setBookmarks] = useState([]) 
+    const handleBookmark=(blog)=>{
+        const newBookmarks = [...bookmarks, blog]
+        setBookmarks(newBookmarks)
+
+    }
     return (
         <main className='main'>
             <div className="blogs">
             {
-                blogs.map(blog=> <Blog key={blog.id} blog={blog} />)
+                blogs.map(blog=> <Blog key={blog.id} blog={blog} handleBookmark={handleBookmark} />)
             }
             </div>
             <section>
-                <Sidebar />
+                <Sidebar bookmarkedBlogs={bookmarks} />
             </section>
         </main>
     );
