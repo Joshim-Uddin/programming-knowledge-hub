@@ -26,3 +26,12 @@
     padding: 10px;
     border-radius: 8px;
 }
+@media only screen and (max-width: 576px) {
+    .time-log{
+        position: relative;
+    }
+    .bookmark{
+        position: relative;
+        top: 10px;
+    }
+}
